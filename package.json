@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/ClaudeBot/hubot-longtext",
   "dependencies": {
-    "hubot": "^2.10.0",
     "hubot-paste": "^1.0.0"
+  },
+  "peerDependencies": {
+    "hubot": "2.x"
   }
 }
