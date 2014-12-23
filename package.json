@@ -1,6 +1,6 @@
 {
   "name": "hubot-longtext",
-  "description": "A Hubot adapter filter for handling long messages by returning a link to an online paste containing the message.",
+  "description": "A Hubot filter script for handling long messages by returning a link to an online paste containing the message.",
   "version": "2.0.0",
   "author": "Ian Lai <ian@fyianlai.com>",
   "license": "MIT",
