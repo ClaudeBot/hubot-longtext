@@ -1,13 +1,21 @@
-MAX_STRING_LENGTH = 300
+# Description
+#   Long Text to Paste Filter
+#
+# Configuration:
+#   HUBOT_LONGTEXT_MAX
+#
+# Commands:
+#   None
+#
+# Author:
+#   MrSaints
 
-class Longtext
-    constructor: (@robot) ->
-        @paste = require("hubot-paste/src/paste")(@robot)
-
-    filter: (str, callback) ->
-        if str.length > MAX_STRING_LENGTH
-            return @paste.dpaste str, "1", callback
-        callback str
+HUBOT_LONGTEXT_MAX = process.env.HUBOT_LONGTEXT_MAX or 300
 
 module.exports = (robot) ->
-    new Longtext robot
+    @paste = require("hubot-paste/src/paste")(robot)
+    robot.addFilter (str, callback) ->
+        if str.length > HUBOT_LONGTEXT_MAX
+            return @paste.dpaste str, "1", (link) ->
+                callback null, link
+        callback null, str
