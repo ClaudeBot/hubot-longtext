@@ -7,7 +7,7 @@ A Hubot filter script for handling long messages by returning a link to an onlin
 
 ## Installation via NPM
 
-1. Install the __hubot-longtext__ module as a Hubot dependency by adding it to your `package.json` file:
+1. Install the __hubot-longtext__ module as a Hubot dependency by running:
 
     ```
     npm install --save hubot-longtext
@@ -16,7 +16,9 @@ A Hubot filter script for handling long messages by returning a link to an onlin
 2. Enable the script by adding the __hubot-longtext__ entry to your `external-scripts.json` file:
 
     ```json
-    ["hubot-longtext"]
+    [
+        "hubot-longtext"
+    ]
     ```
 
 3. Run `npm install`
