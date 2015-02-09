@@ -1,5 +1,7 @@
 # Hubot: Long text _(Experimental)_
 
+[![Dependency Status](https://david-dm.org/ClaudeBot/hubot-longtext.svg?style=flat-square)](https://david-dm.org/ClaudeBot/hubot-longtext)
+
 __This script relies on an experimental Hubot feature (message filters) that is only available on [ClaudeBot's fork of Hubot](//github.com/ClaudeBot/hubot). It will not work with the official Hubot repository.__
 
 A Hubot filter script for handling long messages by returning a link to an online paste containing the message.
