@@ -6,6 +6,8 @@ __This script relies on an experimental Hubot feature (message filters) that is 
 
 A Hubot filter script for handling long messages by returning a link to an online paste containing the message.
 
+See [`src/longtext.coffee`](src/longtext.coffee) for full documentation.
+
 
 ## Installation via NPM
 
@@ -15,7 +17,7 @@ A Hubot filter script for handling long messages by returning a link to an onlin
     npm install --save hubot-longtext
     ```
 
-2. Enable the script by adding the __hubot-longtext__ entry to your `external-scripts.json` file:
+2. Enable the module by adding the __hubot-longtext__ entry to your `external-scripts.json` file:
 
     ```json
     [
