@@ -1,35 +1,28 @@
 {
   "name": "hubot-longtext",
   "description": "A Hubot filter script for handling long messages by returning a link to an online paste containing the message.",
-  "version": "2.0.0",
-
+  "version": "2.0.1",
   "author": "Ian Lai <ian@fyianlai.com>",
   "license": "MIT",
-
   "keywords": [
     "hubot",
     "hubot-scripts",
     "paste",
     "shorten"
   ],
-
   "repository": {
     "type": "git",
     "url": "https://github.com/ClaudeBot/hubot-longtext.git"
   },
-
   "bugs": {
     "url": "https://github.com/ClaudeBot/hubot-longtext/issues"
   },
-
   "dependencies": {
     "hubot-paste": "^2.1.1"
   },
-
   "peerDependencies": {
     "hubot": "2.x"
   },
-
   "devDependencies": {
     "chai": "^3.0.0",
     "coffee-script": "^1.9.3",
@@ -44,9 +37,7 @@
     "sinon": "^1.13.0",
     "sinon-chai": "^2.7.0"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   }
