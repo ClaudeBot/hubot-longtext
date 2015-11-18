@@ -35,3 +35,11 @@ Variable | Default | Description
 --- | --- | ---
 `HUBOT_LONGTEXT_MAX` | 300 | Any message sent by Hubot that is longer than `HUBOT_LONGTEXT_MAX` string characters will be replaced with a link to the paste containing the message
 `HUBOT_LONGTEXT_SERVICE` | Dpaste | _(TBA)_
+
+
+## Sample Interaction
+
+```
+user1>> hubot help
+hubot>> http://dpaste.com/0TGWQ8T
+```
