@@ -10,12 +10,22 @@
 # Author:
 #   MrSaints
 
+async = require "async"
+
 HUBOT_LONGTEXT_MAX = process.env.HUBOT_LONGTEXT_MAX or 300
 
 module.exports = (robot) ->
     @paste = require("hubot-paste/src/paste")(robot)
-    robot.addFilter (str, callback) ->
-        if str.length > HUBOT_LONGTEXT_MAX
-            return @paste.dpaste str, "1", (link) ->
-                callback null, link
-        callback null, str
+
+    robot.responseMiddleware (context, next, done) ->
+        return unless context.plaintext?
+
+        pasteIfLong = (s, cb) ->
+            if s.length > HUBOT_LONGTEXT_MAX
+                return @paste.dpaste s, "1", (link) =>
+                    cb null, link
+            cb null, s
+
+        async.map context.strings, pasteIfLong, (err, results) ->
+            context.strings = results
+            next()

@@ -7,8 +7,9 @@ expect = chai.expect
 describe "longtext", ->
     beforeEach ->
         @robot =
-            respond: sinon.spy()
+            responseMiddleware: sinon.spy (context, next, done) =>
 
         require("../src/longtext")(@robot)
 
-    # TBA
+    it "registers a response middleware", ->
+        expect(@robot.responseMiddleware).to.have.been.called

@@ -1,24 +1,24 @@
 # hubot-longtext _(Experimental)_
 
-[![Dependency Status](https://david-dm.org/ClaudeBot/hubot-longtext.svg?style=flat-square)](https://david-dm.org/ClaudeBot/hubot-longtext)
-[![Dependency Status](https://david-dm.org/ClaudeBot/hubot-longtext.svg)](https://david-dm.org/ClaudeBot/hubot-longtext)
+[![Build Status](https://travis-ci.org/ClaudeBot/hubot-longtext.svg)](https://travis-ci.org/ClaudeBot/hubot-longtext)
+[![devDependency Status](https://david-dm.org/ClaudeBot/hubot-longtext/dev-status.svg)](https://david-dm.org/ClaudeBot/hubot-longtext#info=devDependencies)
 
-__This script relies on an experimental Hubot feature (message filters) that is only available on [ClaudeBot's fork of Hubot](//github.com/ClaudeBot/hubot). It will not work with the official Hubot repository.__
+__This script relies on a new Hubot [v2.17.0](https://github.com/github/hubot/blob/master/CHANGELOG.md#v2170) feature known as ['response middleware'](https://github.com/github/hubot/pull/1021). It WILL NOT work on older versions of Hubot.__
 
-A Hubot filter script for handling long messages by returning a link to an online paste containing the message.
+A Hubot script for handling long messages by returning a link to an online paste containing the message.
 
 See [`src/longtext.coffee`](src/longtext.coffee) for full documentation.
 
 
 ## Installation via NPM
 
-1. Install the __hubot-longtext__ module as a Hubot dependency by running:
+1. Install the **hubot-longtext** module as a Hubot dependency by running:
 
     ```
     npm install --save hubot-longtext
     ```
 
-2. Enable the module by adding the __hubot-longtext__ entry to your `external-scripts.json` file:
+2. Enable the module by adding the **hubot-longtext** entry to your `external-scripts.json` file:
 
     ```json
     [
