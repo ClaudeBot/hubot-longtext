@@ -15,7 +15,7 @@ async = require "async"
 HUBOT_LONGTEXT_MAX = process.env.HUBOT_LONGTEXT_MAX or 300
 
 module.exports = (robot) ->
-    @paste = require("hubot-paste/src/paste")(robot)
+    @paste = require("hubot-paste/src/paste")(robot, false)
 
     robot.responseMiddleware (context, next, done) ->
         return unless context.plaintext?
