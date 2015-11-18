@@ -1,4 +1,4 @@
-# hubot-longtext _(Experimental)_
+# hubot-longtext
 
 [![Build Status](https://travis-ci.org/ClaudeBot/hubot-longtext.svg)](https://travis-ci.org/ClaudeBot/hubot-longtext)
 [![devDependency Status](https://david-dm.org/ClaudeBot/hubot-longtext/dev-status.svg)](https://david-dm.org/ClaudeBot/hubot-longtext#info=devDependencies)
@@ -6,6 +6,8 @@
 __This script relies on a new Hubot [v2.17.0](https://github.com/github/hubot/blob/master/CHANGELOG.md#v2170) feature known as ['response middleware'](https://github.com/github/hubot/pull/1021). It WILL NOT work on older versions of Hubot.__
 
 A Hubot script for handling long messages by returning a link to an online paste containing the message.
+
+This script is useful for _automatically_ capturing long Hubot responses (e.g. help text) that would otherwise flood your chat channel / room. A captured response is then converted into an online paste, and a link to the paste is returned.
 
 See [`src/longtext.coffee`](src/longtext.coffee) for full documentation.
 
