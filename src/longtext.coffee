@@ -23,7 +23,6 @@ module.exports = (robot) ->
         flattened = []
         for string in strings
             flattened = flattened.concat string.toString().split(/\r?\n/)
-        console.log flattened
         flattened
 
     _pasteIfMaxChars = (s, cb) ->
